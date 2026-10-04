@@ -1,0 +1,151 @@
+:root {
+  --bg: #0a0d08;
+  --paper: #ece7d8;
+  --muted: #8d9180;
+  --green: #c3dd6a;
+  --red: #8f2b23;
+  --ink: #0e1109;
+  --line: #2a2e22;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--paper);
+  font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.poster-frame {
+  border: 1px solid var(--green);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+
+.subtitle {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.btn-spotify {
+  background: var(--green);
+  color: var(--ink);
+}
+
+.btn-spotify:hover {
+  background: var(--ink);
+  color: var(--green);
+  border-color: var(--green);
+}
+
+.btn-youtube {
+  background: var(--red);
+  color: var(--paper);
+}
+
+.btn-youtube:hover {
+  background: var(--ink);
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.artist-photo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+.artist-name {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-height: 700px) {
+  body {
+    align-items: flex-start;
+  }
+}
